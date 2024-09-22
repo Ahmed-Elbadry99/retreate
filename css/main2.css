@@ -1,0 +1,955 @@
+body{
+    direction: rtl;
+}
+
+:root{
+    --primary1:#52B694;
+    --gray:#8D8F95
+}
+
+/* h3{
+    font-size: 24px;
+}
+h4{
+    font-size:20px !important;
+}
+
+h5{
+    font-size:16px  !important;
+} */
+.main-container {
+    width: 90%;
+    margin: auto;
+}  
+
+.login,
+.register,
+.forget-password,
+.reset-password,
+.logOut{
+   
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.login .login-container,
+.register .register-container,
+.logOut .logOut-container,
+.forget-password .forget-password-container,
+.reset-password .reset-password-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .login-header,
+.register .register-header,
+.reset-password .forget-password-header{   
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.login .login-header p,
+.register .register-header p,
+.forget-password .forget-password-header p,
+.reset-password .reset-password-header p{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.login .login-header a,
+.register .register-header a,
+.forget-password .forget-password-header a{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary1);
+    text-decoration: none;
+}
+
+.login .login-form,
+.register .register-form,
+.logOut .logOut-form,
+.forget-password .forget-form,
+.reset-password .reset-form{
+    
+    padding: 50px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login  .login-form-header a,
+.register .register-form .register-form-header a,
+.forget-password .login-form-header a
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: #8D8F95;
+    position: relative;
+    text-decoration: none;
+    
+}
+
+.login .login-form-header,
+.register .register-form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+}
+.forget-password .forget-password-header,
+.reset-password .reset-password-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+}
+
+
+.forget-password .forget-password-header p:first-child,
+.reset-password .reset-password-header p{
+    color: var(--primary1);
+}
+
+.forget-password .forget-password-header p:last-child{
+    color: var(--gray);
+    font-size: 16px;
+}
+.login .login-form-header a:hover,
+.register .register-form-header a:hover,
+.forget-password .forget-password-header a:hover{
+    color: var(--primary1);
+
+}
+
+.login .login-form-header a::after,
+.register .register-form-header a::after,
+.forget-password .forget-password-header a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary1);
+    position: absolute;
+    bottom: -15px;
+    right: 50%;
+   
+    transition:  width 0.5s ease;;
+}
+
+.login  .login-form-header a::before,
+.register .register-form-header a::before,
+.forget-password  .forget-password-header a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary1);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+   
+    transition:  width 0.5s ease;;
+}
+
+.login  .login-form-header a:hover::after,
+.register .register-form-header a:hover::after,
+.forget-password  .forget-password-header a:hover::after{
+
+    width: 50%;
+
+
+}
+
+.login  .login-form-header a:hover::before,
+.register .register-form-header a:hover::before,
+.forget-password  .forget-password-header a:hover::before{
+
+    width: 50%;
+
+
+}
+
+.login-form,
+.register-form,
+.forget-form,
+.reset-form{
+    padding: 40px 20px 0; 
+}
+
+.login .login-form form,
+.register .register-form form,
+.forget-password .forget-form form,
+.reset-password .reset-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     
+}
+
+.login .login-form form input,
+.register .register-form form input,
+.forget-password .forget-form form input,
+.reset-password .reset-form form input{
+
+    width: 100%;
+    height: 70px;
+    padding: 24px 40px 24px 20px;
+    border-radius: 10px;
+    border: 1px solid #DBF0E9;
+    outline-color:#8d8f9565 ;
+}
+
+.login .login-form form .input,
+.register .register-form form .input,
+.forget-password  .forget-form form .input,
+.reset-password .reset-form form .input{
+    position: relative;
+}
+
+.login .login-form form .input img,
+.register .register-form form .input img,
+.forget-password .forget-form form .input img,
+.reset-password .reset-form form .input img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.login .login-form form a,
+.register .register-form a,
+.forget-password .forget-form form a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black
+}
+
+.login .login-form form button,
+.register .register-form form button,
+.forget-password .forget-form form button,
+ form button {
+    font-size: 22px;
+    color: white;
+    width: 100%;
+    height: 70px;
+    align-content: center;
+    text-align: center;
+    background-color: var(--primary1);
+    border-radius: 10px;
+    border: none;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    z-index: 2;
+}
+
+.login .login-form form button::before,
+.register .register-form form button::before,
+.forget-password .forget-form form button::before,
+form button::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+  top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 1s ease;
+}
+
+
+/* .login .login-form form button::after,
+.forget-password .forget-form form button::after{
+    content: '';
+    position: absolute;
+    width:0px;
+    height: 600px;
+    background-color:white;
+    top: -200px;
+    left: 40%;
+    transform: translateX( -40%) rotate(45deg);
+    transition: 1s;
+
+} */
+
+.login .login-form form button p,
+.register .register-form form button p,
+ form button p,
+ form button p{
+    margin: 0;
+    transition: 1s;
+
+}
+
+.login .login-form form button:hover p,
+.register .register-form button:hover p,
+.forget-password .forget-form form button:hover p,
+.reset-form form button:hover p{
+    color: var(--primary1);
+    position: relative;
+}
+
+.login .login-form form button:hover,
+.register .register-form form button:hover,
+.forget-password .forget-form form button:hover,
+form button:hover{
+    border: 1px solid var(--primary1);
+    color: var(--primary1) !important;
+    
+}
+
+
+.login .login-form form button:hover::before,
+.register .register-form button:hover::before,
+.forget-password .forget-form form button:hover::before,
+form button:hover::before,
+.login .login-form .login-links .col:hover::after,
+.login .login-form .login-links .col:hover::before,
+.register .register-form .register-links .col:hover::before
+{
+    height: 800%;
+
+  
+}
+
+.login .login-form form button p,
+.register .register-form form button p,
+.forget-password .forget-form form button p{
+    z-index: 9;
+}
+
+.forget-password .forget-form form .send-code{
+
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.forget-password .forget-form form .send-code a{
+
+    color: var(--primary1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login .login-form .login-links,
+.register .register-form .register-links{
+    text-align: center;
+}
+
+.login .login-form .login-links .row,
+.register .register-form .register-links .row{
+    gap: 15px;
+    margin: 20px 0px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login .login-form .login-links .col,
+.register .register-form .register-links .col{
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid #52b69582;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.login .login-form .login-links .col::before,
+.register .register-form .register-links .col::before{
+  
+    content: '';
+    position: absolute;
+    background-color: var(--primary1);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 1s ease;
+}
+
+
+
+
+.login .login-form .login-links .col:hover .col a,
+.login .login-form .login-links .col:hover p,
+.register .register-form .register-links .col:hover .col a,
+.register .register-form .register-links .col:hover p
+{
+    position: relative;
+    color: white;
+    
+}
+
+
+/* 
+.login .login-form .login-links .col a{
+    z-index: 9;
+} */
+
+
+.login .login-form .login-links .col a,
+.register .register-form .register-links .col a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.login .login-form .login-links .col img,
+.register .register-form .register-links .col img{
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    transition: .3s;
+}
+.login .login-form .login-links .col p,
+.register .register-form .register-links .col p{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary1);
+    margin: 0;
+    transition: 1s;
+}
+
+#verification-email{
+    color: black;
+}
+
+.forget-form form .input-check-code {
+    display: flex;
+    gap: 10px;
+    direction: ltr;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+.forget-form form .input-check-code input {
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    background-color: #edf7f482;
+}
+
+
+
+
+
+.login  .login-form-header .active-form::after,
+.register .register-form-header .active-form::after,
+.forget-password  .forget-password-header .active-form::after,
+.login  .login-form-header .active-form::before,
+.register .register-form-header .active-form::before,
+.forget-password  .forget-password-header .active-form:hover::before{
+
+    width: 50%;
+
+
+}
+
+.login .login-form .login-form-header .active-form,
+.register .register-form .register-form-header .active-form
+{
+    color: var(--primary1);
+
+}
+
+.property-profile{
+    margin: 100px 0; 
+}
+
+.property-profile aside{
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.property-profile aside .profile-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: right;
+    border-bottom: 1px solid #d1d1d195;
+    padding: 10px;
+}
+
+.property-profile aside .profile-header img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.property-profile aside .profile-header h3{
+    color: var(--primary1);
+    font-size: 24px;
+}
+
+.property-profile aside .profile-header p{
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.property-profile aside .profile-header .profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.property-profile aside .profile-links ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.property-profile aside .profile-links ul li a{
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.property-profile aside .profile-links ul li a:hover{
+    color: var(--primary1);
+}
+
+
+.property-profile aside .profile-links .add-property{
+    display: block;
+    width: 100%;
+    height: 64px;
+    border: 2px solid var(--primary1);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
+    color: var(--primary1);
+}
+
+.property-profile .property-list .nav{
+
+    border-radius: 12px;
+    border: 1px solid #DBF0E9;
+    padding: 10px;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+
+.property-profile .property-list .nav button{
+    width: 180px;
+    height: 64px;
+    background-color: white;
+    color: var(--gray);
+    text-align: center;
+    align-content: center;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.property-profile .property-list .nav .active{
+
+    background-color: #dbf0e98d;
+    color: var(--primary1);
+}
+
+.property-list .list-nav  .nav-card{
+    border: 1px solid #DBF0E9;
+    border-radius: 8px;
+    padding: 10px;   
+    color: var(--gray);
+    margin: 20px 0;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .card-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .card-header .location{
+    display: flex;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .card-header .location img{
+    width: 24px;
+    height: 22px;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .card-description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.property-list .list-nav  .nav-card .col-lg-6 .period{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+   
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .period i{
+    color: var(--primary1);
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .period p{
+    margin-bottom: 5px ;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .dates-details,
+.property-list .list-nav  .nav-card .col-lg-6 .times-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .dates-details h5,
+.property-list .list-nav  .nav-card .col-lg-6 .times-details h5{
+    color: var(--primary1);
+}
+
+.property-list .list-nav  .nav-card .col-lg-6 .dates-details p,
+.property-list .list-nav  .nav-card .col-lg-6 .times-details p{
+    color: var(--gray);
+}
+
+.profile-link-active{
+    color: var(--primary1) !important;
+    position: relative;
+    padding-right: 15px;
+    
+}
+
+
+
+.profile-link-active::before{
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: var(--primary1);
+    position: absolute;
+    right: 0;
+    top: 60%;
+    transform: translateY(-60%);
+    
+}
+
+
+.prfile-editing-form{
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.prfile-editing-header{
+    margin-bottom: 30px;
+}
+.prfile-editing-header p,
+.prfile-editing-body form p
+{
+    font-size: 24px;
+    color: var(--primary1);
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+.prfile-editing-header h3{
+    color: var(--gray);
+    font-size: 18px;
+    
+}
+
+
+
+.prfile-editing-body form .input{
+
+    position: relative;
+}
+
+.prfile-editing-body form input{
+    width: 100%;
+    height: 70px;
+    padding: 24px 40px 24px 20px;
+    border-radius: 10px;
+    border: 1px solid #DBF0E9;
+    outline-color:#8d8f9565 ;
+}
+
+
+.prfile-editing-body form .input img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+
+.prfile-editing-body form .input i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    color: var(--gray);
+}
+
+form .action-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+form .action-buttons button{
+    color:white;
+    background-color: var(--primary1);
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    border: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+ form .action-buttons a{
+    color:var(--primary1);
+    background-color: white;
+    border: 1px solid #DBF0E9;
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+}
+
+.logOut-form{
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.logOut .logOut-container .logOut-cover{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #EDF7F4;
+    align-content: center;
+    text-align: center;
+}
+
+
+.logOut-form h3{
+    font-size: 22px;
+    font-weight: 600;
+    color:var(--primary1);
+}
+
+.logOut-form p{
+    font-size: 18px;
+    color:var(--gray);
+    text-align: center;
+}
+
+
+.property-attributes,
+.sub-property-attributes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sub-property-attributes h4{
+    font-size: 18px;
+}
+
+.advertise-date{
+    display: flex;
+    align-items: center;
+
+}
+.advertise-date img{
+    width: 24px;
+    height: 24px;
+}
+
+.advertise-date p{
+    margin: 0;
+}
+
+hr{
+    border: 1px solid var(--primary1) !important;
+}
+
+.booking-case{
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking-case p:last-child{
+    color: var(--primary1);
+}
+
+.offers-cards-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offers-cards-header p{
+    font-size: 22px;
+    color: var(--primary1);
+}
+
+.offers-cards-header button{
+    border: 1.5px solid var(--primary1);
+    border-radius: 8px;
+    color: var(--primary1);
+    background-color: white;
+    width: 220px;
+    height: 64px;
+    font-size: 18px;
+
+}
+
+.offers-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offers-card-header p{
+    font-size: 18px;
+    margin: 0;
+    color: var(--primary1);
+}
+
+
+.offers-card-actions{
+    display: flex;
+    gap: 8px;
+}
+
+.offers-card-header a{
+    text-decoration: none;
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #EDF7F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offers-card-header a img{
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    
+}
+
+.offer-date{
+    color: var(--gray);
+    font-size: 18px;
+}
+
+.offer-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer-description h3{
+   font-size: 18px;
+   font-weight: 400;
+   color: black;
+}
+
+.offer-description p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray);
+ }
+
+.offer-description .offer-discount,
+.offer-description .offer-property-type,
+.offer-description .offer-date{
+    text-align: center;
+}
+
+.offer-status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer-status p{
+    color: black;
+    font-size: 18px;
+}
+
+.offer-status label{
+    color: var(--primary1);
+    font-size: 18px;
+}
+
+.offer-status .form-check-input{
+    background-color: #DBF0E9 !important; 
+    
+}
+.offer-status .form-check-input:checked{
+    background-color: var(--primary1) !important;
+    border-color: #52B694 !important;
+}
+
+.offer-status .form-check-input:focus{
+    border-color: #DBF0E9 !important;
+    box-shadow: 0 0 0 .25rem #B7E1D3 !important;
+}

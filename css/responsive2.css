@@ -1,0 +1,27 @@
+@media(max-width: 1200px){
+
+    
+.property-profile aside .profile-header {
+   
+   
+    gap: 5px;
+    
+    padding: 5px;
+}
+
+.property-profile aside .profile-header p {
+
+    font-size: 14px;
+}
+}
+
+@media(max-width: 450px){
+    .property-list .list-nav .nav{
+        width: 100%;
+    }
+
+    .property-profile .property-list .nav button{
+        width: 45%;
+        font-size: 14px;
+    }
+}
