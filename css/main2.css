@@ -953,3 +953,8 @@ hr{
     border-color: #DBF0E9 !important;
     box-shadow: 0 0 0 .25rem #B7E1D3 !important;
 }
+
+
+.property-list .list-nav .nav-card.offers-card{
+    padding: 20px;
+}
