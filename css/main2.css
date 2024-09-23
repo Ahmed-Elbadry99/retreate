@@ -318,7 +318,9 @@ form button:hover{
 form button:hover::before,
 .login .login-form .login-links .col:hover::after,
 .login .login-form .login-links .col:hover::before,
-.register .register-form .register-links .col:hover::before
+.register .register-form .register-links .col:hover::before,
+.add-property:hover::before
+
 {
     height: 800%;
 
@@ -374,7 +376,8 @@ form button:hover::before,
 }
 
 .login .login-form .login-links .col::before,
-.register .register-form .register-links .col::before{
+.register .register-form .register-links .col::before,
+.add-property::before{
   
     content: '';
     position: absolute;
@@ -394,7 +397,10 @@ form button:hover::before,
 .login .login-form .login-links .col:hover .col a,
 .login .login-form .login-links .col:hover p,
 .register .register-form .register-links .col:hover .col a,
-.register .register-form .register-links .col:hover p
+.register .register-form .register-links .col:hover p,
+.add-property:hover
+ 
+
 {
     position: relative;
     color: white;
@@ -406,6 +412,12 @@ form button:hover::before,
 .login .login-form .login-links .col a{
     z-index: 9;
 } */
+
+.add-property{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
 
 
 .login .login-form .login-links .col a,
@@ -554,8 +566,12 @@ form button:hover::before,
     align-content: center;
     font-size: 18px;
     color: var(--primary1);
+    transition: 1s;
 }
 
+.property-profile aside .profile-links .add-property:hover{
+    color: white;
+}
 .property-profile .property-list .nav{
 
     border-radius: 12px;
