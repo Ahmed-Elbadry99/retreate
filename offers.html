@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/responsive2.css" >
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -48,7 +50,9 @@
 
                     <div class="offers-cards-header">
                         <p>أسعار العروض</p>
-                        <button>+ أضف عرض جديد</button>
+                        <button  data-bs-toggle="offcanvas" data-bs-target="#addOffer" aria-controls="addOffer">
+                            + أضف عرض جديد
+                        </button>
                     </div>
                     
                     <div class="property-list">
@@ -103,67 +107,138 @@
                                     
                                 </div>
                                 <!-- card2 -->
-
-                                <div class="nav-card">
+                                <div class="nav-card offers-card">
                                     
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="img-container">
-                                                <img src="./images/card-img.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mt-lg-0 mt-md-0 mt-3">
-                                            <div class="advertise-date">
-                                                <img src="./images/calendar-2.png" alt="">
-                                                <p>13 أغسطس 2024</p>
-                                            </div>
-                                            <div class="card-header">
-                                                <p> <span>2000</span> ريال سعودي / الشهر</p>
-                                                <div class="location">
-                                                    <img src="./images/locatioon.svg" alt="">
-                                                    <p>الرياض</p>
+                                        <div class="col-12">
+                                            <div class="col-12 offers-card-header">
+                                                <p>اسم العرض</p>
+                                                <div class="offers-card-actions">
+                                                    <a href="">
+                                                        <img src="./images/edit-2.png" alt=""> 
+                                                    </a>
+                                                    <a href="">
+                                                       <img src="./images/trash.png" alt=""> 
+                                                    </a>
+                                                    
                                                 </div>
                                             </div>
-                                            
-                                            <p class="card-description">
-                                                للايجار شقة ٣٦٠ م على شارع رئيسي الدور الاول فى عمارة...
-                                            </p>
-                                            
-                                            <div class="property-attributes">
-                                                <div class="sub-property-attributes">
-                                                    <img src="images/pi-1.png" alt="">
-                                                    <h4>200 متر² </h4>
+                                            <div class="col-12 offer-date">
+                                                <p>من الخميس  20 الى 30 سبتمبر 2024</p>
+                                            </div>
+                                            <div class="col-12 offer-description">
+                                                <div class="offer-discount">
+                                                    <h3>نسبة الخصم</h3>
+                                                    <p>10%</p>
                                                 </div>
-                                                <div class="sub-property-attributes">
-                                                    <img src="images/pi-2.png" alt="">
-                                                    <h4>5</h4>
+                                                <div class="offer-property-type">
+                                                    <h3>يطبق على</h3>
+                                                    <p>شقه</p>
                                                 </div>
-                                                <div class="sub-property-attributes">
-                                                    <img src="images/pi-3.png" alt="">
-                                                    <h4>2</h4>
+                                                <div class="offer-date">
+                                                    <h3>أيام العرض</h3>
+                                                    <p>لكل أيام الاسبوع</p>
                                                 </div>
                                             </div>
                                             <hr>
-
-                                            <div class="booking-case">
-                                                <p>حالة حجز الوحدة </p>
-                                                <p>لم يتم الحجز</p>
+                                            <div class="offer-status">
+                                                <p>حالة التفعيل</p>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">مفعل</label>
+                                                </div>
                                             </div>
-                                            
-                                          
-                                                
-                                            
                                         </div>
+                                        
                                     </div>
                                 
                             </div>
-                                
+                             
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div> 
+        
+
+
+
+
+
+<!--  -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="addOffer" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">إضافة عرض جديد</h5>
+    </div>
+    <div class="offcanvas-body">
+        <form action="" method="">
+            <div class="row gap-3">
+                
+                    <div class="col-12 offer-input">
+                        <label for="">اسم العرض ( لن يكون ظاهرا للعملاء)</label>
+                        <input type="text" placeholder="اكتب اسم العرض">
+                    </div>
+                    <div class="col-12 offer-input">
+                        <label for="">الوحدات التى تريد أن يطبق عليها العرض</label>
+                        <input type="text" placeholder="اختر الوحدات">
+                    </div>
+                    <div class="col-12 offer-input">
+                        <label for="">قيمة الخصم</label>
+                        <div class="row">
+                            <div class="col-6 choose-discount-type">
+                                
+                                <select name="" id="discount-type">
+                                    <option value="percentage">نسبة</option>
+                                    <option value="amount">قيمة</option>
+                                    
+                                </select>
+                                
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="value-input percentage  discount-value">
+                                    <input type="text">
+                                    <span>%</span>
+                                </div>
+                                <div class="value-input amount discount-value">
+                                    <span>ريال</span>
+                                    <input type="text">
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="col-12 offer-input">
+                        <label for="">تاريخ تطبيق العرض</label>
+                        <div class="input-date">
+                            <input id="dateInput" type="date" placeholder="تاريخ تطبيق العرض">
+                            <img id="calendarIcon" src="./images/calendar-2 (2).png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 add-offers-actions">
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="submit" >حفظ</button>
+                            </div>
+                            <div class="col-6">
+                                <a href="">إلغاء</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </form>
+     
+    </div>
+  </div>
+  
+  
     </section>
 
         <!-- owl carousel -->

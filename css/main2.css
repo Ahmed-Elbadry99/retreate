@@ -593,68 +593,69 @@ form button:hover::before,
     margin: 20px 0;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6{
+.property-list .list-nav  .nav-card .col-lg-6,
+.property-list .list-nav  .nav-card .col-lg-8{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .card-header{
+.property-list .list-nav  .nav-card .card-header{
     display: flex;
     justify-content: space-between;
     
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .img-container img{
+.property-list .list-nav  .nav-card .img-container img{
     width: 100%;
     height: 100%;
     border-radius: 8px;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .card-header .location{
+.property-list .list-nav  .nav-card .card-header .location{
     display: flex;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .card-header .location img{
+.property-list .list-nav  .nav-card .card-header .location img{
     width: 24px;
     height: 22px;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .card-description{
+.property-list .list-nav  .nav-card .card-description{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 
-.property-list .list-nav  .nav-card .col-lg-6 .period{
+.property-list .list-nav  .nav-card .period{
     display: flex;
     align-items: center;
     gap: 4px;
    
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .period i{
+.property-list .list-nav  .nav-card .period i{
     color: var(--primary1);
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .period p{
+.property-list .list-nav  .nav-card  .period p{
     margin-bottom: 5px ;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .dates-details,
-.property-list .list-nav  .nav-card .col-lg-6 .times-details{
+.property-list .list-nav  .nav-card .dates-details,
+.property-list .list-nav  .nav-card  .times-details{
     display: flex;
     justify-content: space-between;
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .dates-details h5,
-.property-list .list-nav  .nav-card .col-lg-6 .times-details h5{
+.property-list .list-nav  .nav-card  .dates-details h5,
+.property-list .list-nav  .nav-card .times-details h5{
     color: var(--primary1);
 }
 
-.property-list .list-nav  .nav-card .col-lg-6 .dates-details p,
-.property-list .list-nav  .nav-card .col-lg-6 .times-details p{
+.property-list .list-nav  .nav-card .dates-details p,
+.property-list .list-nav  .nav-card .times-details p{
     color: var(--gray);
 }
 
@@ -938,10 +939,13 @@ hr{
 .offer-status label{
     color: var(--primary1);
     font-size: 18px;
+    margin-left: 8px;
 }
 
 .offer-status .form-check-input{
     background-color: #DBF0E9 !important; 
+    height: 25px;
+    width: 45px !important;
     
 }
 .offer-status .form-check-input:checked{
@@ -958,3 +962,178 @@ hr{
 .property-list .list-nav .nav-card.offers-card{
     padding: 20px;
 }
+
+#addOffer .offcanvas-body .offer-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#addOffer .offcanvas-body .offer-input input,
+#addOffer .offcanvas-body .offer-input #discount-type{
+    height: 64px;
+    border-radius: 12px;
+    border: 1.5px solid #DBF0E9;
+    padding: 5px;
+    width: 100%;
+}
+
+#addOffer .offcanvas-body .offer-input .choose-discount-type{
+    position: relative;
+}
+
+#addOffer .offcanvas-body .offer-input #discount-type{
+    width: 100%;
+    appearance: none;
+  
+
+}
+
+#addOffer .offcanvas-body .offer-input i{
+    position: absolute;
+    left: 20px;
+    transform: translateY(-50%);
+    top: 50%;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: bold;
+  
+
+}
+
+
+
+#addOffer .offcanvas-body .offer-input .discount-value{
+    position: relative;
+}
+
+#addOffer .offcanvas-body .offer-input .discount-value span{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.discount-value{
+    display: flex;
+    
+}
+
+
+#addOffer .offcanvas-body .offer-input .amount{
+    display: none;
+}
+
+#addOffer .offcanvas-body .offer-input .input-date{
+    position: relative;
+
+}
+
+#addOffer .offcanvas-body .offer-input .input-date img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+/* Remove the date icon in Chrome, Safari, Edge, and Opera */
+#addOffer .offcanvas-body .offer-input input[type="date"] {
+    appearance: none;              /* Standard property */
+    -webkit-appearance: none;      /* Chrome, Safari, Edge, Opera */
+    -moz-appearance: textfield;    /* Firefox */
+    text-align: end;
+}
+
+/* Remove the date icon for Chrome, Safari, Edge, and Opera specifically */
+#addOffer .offcanvas-body .offer-input input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* Remove the date icon in Internet Explorer */
+#addOffer .offcanvas-body .offer-input input[type="date"]::-ms-clear {
+    display: none;
+}
+.add-offers-actions button,
+.add-offers-actions a{
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    border-radius: 8px;
+    display: block;
+    font-size: 18px;
+
+}
+
+
+.add-offers-actions button{
+    background-color: var(--primary1);
+    color: white;
+}
+
+.add-offers-actions a{
+    color: var(--primary1);
+    border: 1.5px solid var(--primary1);
+
+}
+
+.offcanvas{
+    --bs-offcanvas-width: 450px !important;
+}
+
+.offcanvas .offcanvas-header h5{
+    color: var(--gray);
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.offcanvas .offcanvas-header button{
+    color: var(--gray);
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    margin: 0;
+    
+}
+
+:focus-visible{
+    outline-color:#52B694 ; 
+}
+
+.offcanvas .value-input span{
+    color: var(--primary1);
+}
+
+.rent-property .rent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.rent-property .rent p{
+    color: black;
+}
+
+.rent-property .rent span,
+.rent-property .rent a{
+    margin-right: 5px;
+    color: var(--gray);
+}
+
+.rent-property .rent a{
+    color: var(--primary1);
+}
+
+.rent-property  .rent.property-rent-code p{
+    color: var(--primary1);
+    background-color: #EDF7F4;
+    width: fit-content;
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
